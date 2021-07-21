@@ -1,11 +1,11 @@
-.navigation {
+.menu {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 18px;
 }
 
-.navigation__signin-button {
+.menu__signin-button {
     background: #2BE080;
     height: 32px;
     width: 76px;
@@ -22,7 +22,11 @@
     text-align: center;
 }
 
-.navigation__link {
+.menu__signin-button:hover {
+    opacity: 0.5;
+}
+
+.menu__link {
     font-family: 'Inter', 'Arial', sans-serif;
     font-size: 12px;
     font-style: normal;
@@ -33,14 +37,18 @@
     text-decoration: none;
 }
 
-.navigation__link_bold {
+.menu__link:hover {
+    opacity: 0.5;
+}
+
+.menu__link_bold {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
 }
 
-.navigation__link_normal {
+.menu__link_normal {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -48,7 +56,7 @@
     margin-left: 20px;
 }
 
-.navigation__profile-button {
+.menu__profile-button {
     background: none;
     width: 100px;
     height: 30px;
@@ -62,7 +70,11 @@
     padding: 0;
 }
 
-.navigation__profile-button_small {
+.menu__profile-button:hover {
+    opacity: 0.5;
+}
+
+.menu__profile-button_small {
     background-image: url(../../images/sandwich.svg);
     width: 44px;
     height: 44px;

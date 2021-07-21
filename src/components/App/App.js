@@ -1,20 +1,25 @@
 import './App.css';
 import Header from "../Header/Header";
-import Navigation from "../Navigation/Navigation";
+import Menu from "../Menu/Menu";
+import Promo from "../Promo/Promo";
+import NavTab from "../NavTab/NavTab";
 
 function App() {
   return (
     <div className="page">
       <div className="page__container">
         <Header>
-          <Navigation>
-            <a href="#" className="navigation__link">Регистрация</a>
-            {/* <a href="#" className="navigation__link navigation__link_bold">Фильмы</a>
-            <a href="#" className="navigation__link navigation__link_normal">Сохраненные фильмы</a>
-            <button className="navigation__profile-button navigation__profile-button_small"></button> */}
-            <button className="navigation__signin-button">Войти</button>
-          </Navigation>
+          <Menu>
+            <a href="#" className="menu__link">Регистрация</a>
+            {/* <a href="#" className="menu__link menu__link_bold">Фильмы</a>
+            <a href="#" className="menu__link menu__link_normal">Сохраненные фильмы</a>
+            <button className="menu__profile-button menu__profile-button_small"></button> */}
+            <button className="menu__signin-button">Войти</button>
+          </Menu>
         </Header>
+        <Promo>
+            <NavTab />
+        </Promo>
       </div>
     </div>
   );
