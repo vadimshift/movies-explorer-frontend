@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Menu from "../Menu/Menu";
 import Promo from "../Promo/Promo";
 import NavTab from "../NavTab/NavTab";
+import AboutProject from "../AboutProject/AboutProject";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Promo>
             <NavTab />
         </Promo>
+        <AboutProject />
       </div>
     </div>
   );
