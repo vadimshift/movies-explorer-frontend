@@ -1,7 +1,7 @@
 import './AboutProject.css';
 import SectionTitle from '../SectionTitle/SectionTitle';
 
-function AboutProject(props) {
+function AboutProject() {
   return (
     <section className="about-project">
         <SectionTitle title="О проекте" />

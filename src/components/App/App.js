@@ -4,6 +4,7 @@ import Menu from "../Menu/Menu";
 import Promo from "../Promo/Promo";
 import NavTab from "../NavTab/NavTab";
 import AboutProject from "../AboutProject/AboutProject";
+import Techs from "../Techs/Techs";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <NavTab />
         </Promo>
         <AboutProject />
+        <Techs />
       </div>
     </div>
   );
