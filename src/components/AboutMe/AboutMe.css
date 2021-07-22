@@ -1,0 +1,78 @@
+.about-me {
+    max-width: 1280px;
+    position: relative;
+}
+
+.about-me__avatar {
+    width: 270px;
+    height: 327px;
+    object-fit: cover;
+    object-position: left top;
+    border-radius: 10px;
+    position: absolute;
+    right: 70px;
+    top: 227px;
+}
+
+.about-me__title {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    max-width: 600px;
+    margin: 66px 0 0 70px;
+}
+
+.about-me__subtitle {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    max-width: 600px;
+    margin: 18px 0 0 70px;
+}
+
+.about-me__text {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    max-width: 600px;
+    margin: 26px 0 0 70px;
+}
+
+.about-me__links {
+    display: flex;
+    flex-direction: row;
+    margin: 100px 0 0 70px;
+    list-style: none;
+    padding: 0;
+}
+
+.about-me__link {
+    font-family: 'Inter', 'Arial', sans-serif;
+    margin: 0 20px 0 0;
+    padding: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+}
+
+.about-me__link:hover {
+    opacity: 0.5;
+}
