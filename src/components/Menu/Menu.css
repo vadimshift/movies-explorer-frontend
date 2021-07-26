@@ -38,7 +38,7 @@
 }
 
 .menu__link:hover {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .menu__link_bold {
@@ -71,7 +71,7 @@
 }
 
 .menu__profile-button:hover {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .menu__profile-button_small {
