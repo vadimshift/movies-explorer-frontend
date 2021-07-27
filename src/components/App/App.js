@@ -8,6 +8,7 @@ import Techs from "../Techs/Techs";
 import AboutMe from "../AboutMe/AboutMe";
 import Portfolio from "../Portfolio/Portfolio";
 import SearchForm from "../SearchForm/SearchForm";
+import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import Footer from "../Footer/Footer";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           </Menu>
         </Header>
         <SearchForm />
+        <MoviesCardList />
         {/* <Promo>
             <NavTab />
         </Promo>
