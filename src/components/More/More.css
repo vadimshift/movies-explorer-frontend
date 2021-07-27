@@ -1,0 +1,30 @@
+.more {
+    max-width: 1280px;
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+.more__button {
+    padding: 0;
+    height: 36px;
+    width: 100%;
+    /* margin-left: 70px;
+    margin-right: 70px; */
+    margin-top: 50px;
+    margin-bottom: 80px;
+    border-radius: 6px;
+    border: none;
+    background: #F9F9F9;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.more__button:hover {
+    opacity: 0.8;
+}
