@@ -10,22 +10,24 @@ import Portfolio from "../Portfolio/Portfolio";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import Profile from "../Profile/Profile";
+import Register from "../Register/Register"
 import Footer from "../Footer/Footer";
 
 function App() {
   return (
     <div className="page">
       <div className="page__container">
-        <Header>
+        <Register />
+        {/* <Header>
           <Menu>
             <a href="#" className="menu__link">Регистрация</a>
             {/* <a href="#" className="menu__link menu__link_bold">Фильмы</a>
             <a href="#" className="menu__link menu__link_normal">Сохраненные фильмы</a>
             <button className="menu__profile-button menu__profile-button_small"></button> */}
-            <button className="menu__signin-button">Войти</button>
-          </Menu>
-        </Header>
-        <Profile/>
+            {/* <button className="menu__signin-button">Войти</button> */}
+       {/*    </Menu>
+        </Header> */} 
+        {/* <Profile/> */}
         {/* <SearchForm />
         <MoviesCardList /> */}
         {/* <Promo>
@@ -35,7 +37,7 @@ function App() {
         <Techs />
         <AboutMe />
         <Portfolio /> */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
