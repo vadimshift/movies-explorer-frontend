@@ -16,7 +16,10 @@ function Profile() {
             <div className="profile__button-container">
                 <button className="profile__edit-button">Редактировать</button>
                 <button className="profile__exit-button">Выйти из аккаунта</button>
+                <span className="profile__error-massage">При обновлении профиля произошла ошибка.</span>
+                <button className="profile__save-button">Сохранить</button>
             </div>
+            
         </div>
         
     </section>
