@@ -9,6 +9,7 @@ import AboutMe from "../AboutMe/AboutMe";
 import Portfolio from "../Portfolio/Portfolio";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import Profile from "../Profile/Profile";
 import Footer from "../Footer/Footer";
 
 function App() {
@@ -24,8 +25,9 @@ function App() {
             <button className="menu__signin-button">Войти</button>
           </Menu>
         </Header>
-        <SearchForm />
-        <MoviesCardList />
+        <Profile/>
+        {/* <SearchForm />
+        <MoviesCardList /> */}
         {/* <Promo>
             <NavTab />
         </Promo>
