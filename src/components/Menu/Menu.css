@@ -1,81 +1,71 @@
 .menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 18px;
 }
 
 .menu__signin-button {
-    background: #2BE080;
-    height: 32px;
-    width: 76px;
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
-    margin-left: 30px;
-    font-family: 'Inter', 'Arial', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: 0px;
-    text-align: center;
+  background: #2be080;
+  height: 32px;
+  width: 76px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  margin-left: 30px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 .menu__signin-button:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .menu__link {
-    font-family: 'Inter', 'Arial', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: 0px;
-    color: #000000;
-    text-decoration: none;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 20px;
 }
 
 .menu__link:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .menu__link_bold {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-}
-
-.menu__link_normal {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    margin-left: 20px;
+  font-weight: 500;
 }
 
 .menu__profile-button {
-    background: none;
-    width: 100px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../../images/profile.svg);
-    margin-left: 50px;
-    padding: 0;
+  background: none;
+  width: 100px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../images/profile.svg);
+  margin-left: 50px;
+  padding: 0;
 }
 
 .menu__profile-button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .menu__profile-button_small {
-    background-image: url(../../images/sandwich.svg);
-    width: 44px;
-    height: 44px;
+  background-image: url(../../images/sandwich.svg);
+  width: 44px;
+  height: 44px;
 }

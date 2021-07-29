@@ -1,29 +1,54 @@
 import './Profile.css';
+import Header from '../Header/Header';
+import Menu from '../Menu/Menu';
 
 function Profile() {
   return (
-    <section className="profile">
-        <h2 className="profile__title">Привет, Виталий!</h2>
-        <div className="profile__conteiner">
-            <div className="profile__content">
-                <p className="profile__subtitle">Имя</p>
-                <p className="profile__name">Виталий</p>
-            </div>
-            <div className="profile__content">
-                <p className="profile__subtitle">E-mail</p>
-                <p className="profile__email">pochta@yandex.ru</p>
-            </div>
-            <div className="profile__button-container">
-                <button className="profile__edit-button">Редактировать</button>
-                <button className="profile__exit-button">Выйти из аккаунта</button>
-                <span className="profile__error-massage">При обновлении профиля произошла ошибка.</span>
-                <button className="profile__save-button">Сохранить</button>
-            </div>
-            
-        </div>
-        
-    </section>
-    );
+    <>
+      <Header>
+        <Menu>
+          <a href='#' className='menu__link'>
+            Фильмы
+          </a>
+          <a href='#' className='menu__link menu__link_bold'>
+            Сохраненные фильмы
+          </a>
+          <button className='menu__profile-button'></button>
+        </Menu>
+      </Header>
+      <section className='profile'>
+        <h2 className='profile__title'>Привет, Виталий!</h2>
+        <form className='profile__conteiner'>
+          <div className='profile__content'>
+            <p className='profile__subtitle'>Имя</p>
+            <input
+              id='name'
+              type='text'
+              placeholder='Виталий'
+              className='profile__input-name'
+            ></input>
+          </div>
+          <div className='profile__content'>
+            <p className='profile__subtitle'>E-mail</p>
+            <input
+              id='email '
+              type='email'
+              placeholder='pochta@yandex.ru'
+              className='profile__input-email'
+            ></input>
+          </div>
+          <div className='profile__button-container'>
+            <button className='profile__edit-button'>Редактировать</button>
+            <button className='profile__exit-button'>Выйти из аккаунта</button>
+            <span className='profile__error-massage'>
+              При обновлении профиля произошла ошибка.
+            </span>
+            <button className='profile__save-button'>Сохранить</button>
+          </div>
+        </form>
+      </section>
+    </>
+  );
 }
 
 export default Profile;
