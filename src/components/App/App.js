@@ -1,11 +1,9 @@
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
 
-import SearchForm from '../SearchForm/SearchForm';
-import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Profile from '../Profile/Profile';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
-import Footer from '../Footer/Footer';
 import NotFound from '../NotFound/NotFound';
 import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
@@ -15,7 +13,29 @@ function App() {
   return (
     <div className='page'>
       <div className='page__container'>
-        <Main  />
+        <Switch>
+          <Route exact path='/'>
+            <Main />
+          </Route>
+          <Route path='/movies'>
+            <Movies />
+          </Route>
+          <Route path='/saved-movies'>
+            <SavedMovies />
+          </Route>
+          <Route path='/profile'>
+            <Profile />
+          </Route>
+          <Route path='/signin'>
+            <Login />
+          </Route>
+          <Route path='/signup'>
+            <Register />
+          </Route>
+          <Route path='*'>
+            <NotFound />
+          </Route>
+        </Switch>
       </div>
     </div>
   );

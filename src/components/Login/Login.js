@@ -1,11 +1,14 @@
 import './Login.css';
 import logo from '../../images/logo.svg';
+import { Link } from 'react-router-dom';
 
 function Login() {
   return (
     <section className='login'>
       <div className='login__container'>
-        <img className='login__logo' src={logo} alt='Логотип проекта'></img>
+        <Link to='/'>
+          <img className='login__logo' src={logo} alt='Логотип проекта'></img>
+        </Link>
         <h2 className='login__title'>Рады видеть!</h2>
         <form className='login__form'>
           <span className='login__input-subtitle'>E-mail</span>
@@ -23,9 +26,9 @@ function Login() {
           <button className='login__submit-button'>Войти</button>
           <p className='login__submit-button-subtitle'>
             Ещё не зарегистрированы?
-            <a className='login__link' href='#'>
+            <Link className='login__link' to='/signup'>
               Регистрация
-            </a>
+            </Link>
           </p>
         </form>
       </div>

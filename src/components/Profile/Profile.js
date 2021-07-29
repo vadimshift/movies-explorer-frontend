@@ -6,15 +6,7 @@ function Profile() {
   return (
     <>
       <Header>
-        <Menu>
-          <a href='#' className='menu__link'>
-            Фильмы
-          </a>
-          <a href='#' className='menu__link menu__link_bold'>
-            Сохраненные фильмы
-          </a>
-          <button className='menu__profile-button'></button>
-        </Menu>
+        <Menu />
       </Header>
       <section className='profile'>
         <h2 className='profile__title'>Привет, Виталий!</h2>

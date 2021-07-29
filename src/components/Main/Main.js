@@ -1,6 +1,6 @@
 import './Main.css';
 import Header from '../Header/Header';
-import Menu from '../Menu/Menu';
+import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import Promo from '../Promo/Promo';
 import NavTab from '../NavTab/NavTab';
 import AboutProject from '../AboutProject/AboutProject';
@@ -13,12 +13,7 @@ function Main() {
   return (
     <>
       <Header>
-        <Menu>
-          <a href='#' className='menu__link'>
-            Регистрация
-          </a>
-          <button className='menu__signin-button'>Войти</button>
-        </Menu>
+        <HeaderMenu />
       </Header>
       <Promo>
         <NavTab />
