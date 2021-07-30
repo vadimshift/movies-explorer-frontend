@@ -22,6 +22,7 @@ function AboutMe() {
         <li>
           <a
             target='_blank'
+            rel='noopener noreferrer'
             href='https://web.facebook.com/vadim.shift.9/'
             className='about-me__link'
           >
@@ -32,6 +33,7 @@ function AboutMe() {
           <a
             href='https://github.com/vadimshift'
             target='_blank'
+            rel='noopener noreferrer'
             className='about-me__link'
           >
             Github

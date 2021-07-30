@@ -9,6 +9,7 @@ function Portfolio() {
         <li className='portfolio__links'>
           <a
             target='_blank'
+            rel='noopener noreferrer'
             href='https://github.com/vadimshift/how-to-learn'
             className='portfolio__link'
           >
@@ -23,6 +24,7 @@ function Portfolio() {
         <li className='portfolio__links'>
           <a
             target='_blank'
+            rel='noopener noreferrer'
             href='https://github.com/vadimshift/russian-travel'
             className='portfolio__link'
           >
@@ -37,6 +39,7 @@ function Portfolio() {
         <li className='portfolio__links'>
           <a
             target='_blank'
+            rel='noopener noreferrer'
             href='https://github.com/vadimshift/react-mesto-api-full'
             className='portfolio__link'
           >
