@@ -1,26 +1,26 @@
 import './MoviesCardList.css';
-import MoviesCard from "../MoviesCard/MoviesCard";
-import More from "../More/More";
+import MoviesCard from '../MoviesCard/MoviesCard';
 
-function MoviesCardList() {
+function MoviesCardList(props) {
   return (
-      <div>
-        <section className="movies-card-list">
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-            <MoviesCard />
-        </section>
-        <More />
+    <div>
+      <section className='movies-card-list'>
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        <MoviesCard />
+        
+      </section>
+      {props.children}
     </div>
   );
 }

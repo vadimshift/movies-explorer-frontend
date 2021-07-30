@@ -48,3 +48,31 @@
   width: 44px;
   height: 44px;
 }
+
+.menu__mobile-button {
+  background-image: url(../../images/mobile_header_icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 44px;
+  width: 44px;
+  border: none;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  margin-top: 15px;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__mobile-button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}

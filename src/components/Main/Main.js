@@ -8,12 +8,14 @@ import Techs from '../Techs/Techs';
 import AboutMe from '../AboutMe/AboutMe';
 import Portfolio from '../Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
+import MobileMenu from '../MobileMenu/MobileMenu';
 
 function Main() {
   return (
     <>
       <Header>
         <HeaderMenu />
+        <MobileMenu />
       </Header>
       <Promo>
         <NavTab />

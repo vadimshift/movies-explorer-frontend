@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 function HeaderMenu() {
   return (
+    <>
     <nav className='header-menu'>
       <Link to='/signup' className='header-menu__link'>
         Регистрация
@@ -11,6 +12,8 @@ function HeaderMenu() {
         <button className='header-menu__signin-button'>Войти</button>
       </Link>
     </nav>
+    <button type='button' className="header-menu__mobile-button"></button>
+    </>
   );
 }
 
