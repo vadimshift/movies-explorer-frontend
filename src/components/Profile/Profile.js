@@ -9,7 +9,7 @@ function Profile() {
         <Menu />
       </Header>
       <section className='profile'>
-        <h2 className='profile__title'>Привет, Виталий!</h2>
+        <h2 className='profile__title'>Привет, Вадим!</h2>
         <form className='profile__conteiner'>
           <div className='profile__content'>
             <p className='profile__subtitle'>Имя</p>
