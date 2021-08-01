@@ -48,3 +48,28 @@
 .not-found__link:hover {
   opacity: 0.8;
 }
+
+@media screen and (max-width: 320px) {
+  .not-found__title {
+    font-size: 80px;
+    line-height: 97px;
+    margin-top: 329px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .not-found__subtitle {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .not-found__link {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 284px;
+    margin-bottom: 60px;
+  }
+}

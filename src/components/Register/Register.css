@@ -3,7 +3,7 @@
 }
 
 .register__container {
-  width: 396px;
+  max-width: 396px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -130,4 +130,61 @@
 
 .register__link:hover {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+  .register__logo {
+    margin-top: 232px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .register__logo {
+    margin-top: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .register__container {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .register__title {
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .register__form {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .register__submit-button {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 157px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .register__submit-button-subtitle {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .register__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
