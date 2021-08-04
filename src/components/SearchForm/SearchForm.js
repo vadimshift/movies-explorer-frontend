@@ -1,18 +1,21 @@
 import './SearchForm.css';
-import icon from "../../images/searchicon.svg";
-import FilterCheckbox from "../FilterCheckbox/FilterCheckbox"
+import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
 function SearchForm() {
   return (
-    <section className="searching">
-        <form className="search-form">
-            <img className="search-form__icon" src={icon} alt="Иконка поиска" />
-            <input type="text" className="search-form__input" placeholder="Фильм" /> 
-            <button className="search-form__button">Найти</button>
+    <section className='searching'>
+      <div className='searching__container'>
+        <form className='search-form'>
+          <input
+            type='text'
+            className='search-form__input'
+            placeholder='Фильм'
+          />
+          <button className='search-form__button'></button>
         </form>
         <FilterCheckbox />
+      </div>
     </section>
-      
   );
 }
 

@@ -1,6 +1,11 @@
 .about-me {
-  max-width: 1280px;
   position: relative;
+  background: #202020;
+}
+
+.about-me__content {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .about-me__avatar {
   width: 270px;
@@ -31,6 +36,7 @@
   letter-spacing: -0.04em;
   text-align: left;
   margin: 0;
+  color: #ffffff;
 }
 
 .about-me__subtitle {
@@ -43,6 +49,8 @@
   text-align: left;
   margin-top: 18px;
   margin-bottom: 0;
+  color: #ffffff;
+  mix-blend-mode: normal;
 }
 
 .about-me__text {
@@ -55,6 +63,8 @@
   text-align: left;
   margin-top: 26px;
   margin-bottom: 0;
+  color: #ffffff;
+  mix-blend-mode: normal;
 }
 .about-me__links {
   display: flex;
@@ -77,7 +87,7 @@
   text-align: left;
   text-decoration: none;
   cursor: pointer;
-  color: #000000;
+  color: #ffffff;
 }
 .about-me__link:hover {
   opacity: 0.7;
@@ -150,7 +160,7 @@
 
 @media screen and (max-width: 768px) {
   .about-me__links {
-    margin-top: 100px;
+    margin-top: 87px;
     margin-bottom: 0;
   }
 }
@@ -173,11 +183,18 @@
     width: 292px;
     height: 352px;
     margin-left: 14px;
+    margin-top: 60px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .about-me__mega-container {
     flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about-me__link {
+    margin-right: 26px;
   }
 }

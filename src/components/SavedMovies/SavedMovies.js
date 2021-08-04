@@ -1,6 +1,6 @@
 import './SavedMovies.css';
 import Header from '../Header/Header';
-import Menu from '../Menu/Menu';
+import Navigation  from '../Navigation/Navigation';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
@@ -10,12 +10,11 @@ function SavedMovies() {
   return (
     <>
       <Header>
-        <Menu />
+        <Navigation />
         <MobileMenu />
       </Header>
       <SearchForm />
       <MoviesCardList />
-      <div className="saved-movies__divider"></div>
       <Footer />
     </>
   );

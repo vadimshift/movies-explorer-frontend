@@ -1,39 +1,96 @@
 .header {
-    max-width: 1280px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  background-color: #202020;
 }
 
-.header__logo {
-    margin-top: 18px;
-    margin-bottom: 18px;
-    margin-left: 70px;
+.header__container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
-.header__menu {
-    margin-right: 70px;
+
+.header__mobile-button {
+  background-image: url(../../images/mobile_header_icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 44px;
+  width: 44px;
+  border: none;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: #202020;
+  cursor: pointer;
+  outline: none;
+  display: none;
+}
+
+.header__content {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: 70px;
+  margin-right: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__profile-button {
+  background: none;
+  width: 100px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../images/profile.svg);
+  padding: 0;
 }
 
 @media screen and (max-width: 768px) {
-    .header__logo {
-        margin-left: 30px;
-    }
+  .header__logo {
+    margin-left: 30px;
   }
+}
 
-  @media screen and (max-width: 320px) {
-    .header__logo {
-        margin-left: 14px;
-    }
+@media screen and (max-width: 320px) {
+  .header__logo {
+    margin-left: 14px;
   }
+}
 
-  @media screen and (max-width: 768px) {
-    .header__menu {
-        margin-right: 30px;
-    }
+@media screen and (max-width: 768px) {
+  .header__menu {
+    margin-right: 30px;
   }
+}
 
-  @media screen and (max-width: 320px) {
-    .header__menu {
-        margin-right: 14px;
-    }
+@media screen and (max-width: 320px) {
+  .header__menu {
+    margin-right: 14px;
   }
+}
+@media screen and (max-width: 768px) {
+  .header__profile-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__content {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__mobile-button {
+    display: block;
+  }
+}

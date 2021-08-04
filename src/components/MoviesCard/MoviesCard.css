@@ -1,6 +1,7 @@
 .movies-card {
-  background: #fdfdfd;
+  background: #222222;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
   max-width: 364px;
   height: 271px;
 }
@@ -12,16 +13,17 @@
 
 .movies-card__name {
   font-family: 'Inter', 'Arial', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 16px;
   letter-spacing: 0px;
   text-align: left;
   margin-top: 0;
-  padding-top: 14px;
-  margin-left: 14px;
+  padding-top: 16px;
+  margin-left: 16px;
   margin-bottom: 0;
+  color: #ffffff;
 }
 
 .movies-card__duration {
@@ -32,7 +34,7 @@
   line-height: 13px;
   letter-spacing: 0px;
   text-align: left;
-  color: #a0a0a0;
+  color: #8b8b8b;
   margin-top: 9px;
   margin-left: 14px;
   margin-bottom: 14px;
@@ -42,19 +44,18 @@
 .movies-card__saved-button {
   background-image: url(../../images/buttonsaved.svg);
   background-repeat: no-repeat;
-  height: 30px;
-  width: 30px;
+  height: 12px;
+  width: 14px;
   border: none;
   box-sizing: border-box;
   background-size: contain;
   padding: 0;
-  background-color: #ffffff;
+  background-color:#222222;
   cursor: pointer;
   outline: none;
   position: absolute;
   top: 19px;
   right: 14px;
-  border-radius: 36px;
 }
 .movies-card__saved-button:hover {
   opacity: 0.8;
