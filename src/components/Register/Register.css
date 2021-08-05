@@ -157,6 +157,13 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .register__container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .register__container {
     margin-left: 30px;

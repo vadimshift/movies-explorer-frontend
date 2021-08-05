@@ -6,10 +6,10 @@ import Preloader from '../Preloader/Preloader';
 import Footer from '../Footer/Footer';
 import More from '../More/More';
 
-function Movies() {
+function Movies({isMobileMenuOpen}) {
   return (
     <>
-      <Header />
+      <Header {...isMobileMenuOpen} />
       <SearchForm />
       <MoviesCardList>
         <More />

@@ -17,12 +17,14 @@ function Login() {
               className='login__input login__input_type_email'
               type='email'
               id='email'
+              required
             ></input>
             <span className='login__input-subtitle'>Пароль</span>
             <input
               className='login__input login__input_type_password'
               type='password'
               id='password'
+              required
             ></input>
             <button className='login__submit-button'>Войти</button>
             <p className='login__submit-button-subtitle'>

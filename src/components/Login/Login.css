@@ -7,6 +7,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .login__container {
   max-width: 396px;
   margin-left: auto;
@@ -151,6 +152,13 @@
   .login__container {
     margin-top: 232px;
     margin-bottom: 232px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login__container {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }
 

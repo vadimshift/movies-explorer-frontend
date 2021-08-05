@@ -21,18 +21,21 @@ function Register() {
               className='register__input register__input_type_name'
               type='text'
               id='name'
+              required
             ></input>
             <span className='register__input-subtitle'>E-mail</span>
             <input
               className='register__input register__input_type_email'
               type='email'
               id='email'
+              required
             ></input>
             <span className='register__input-subtitle'>Пароль</span>
             <input
               className='register__input register__input_type_password'
               type='password'
               id='password'
+              required
             ></input>
             <span className='register__error-message'>
               Что-то пошло не так...

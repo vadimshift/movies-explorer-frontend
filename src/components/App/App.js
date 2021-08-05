@@ -1,6 +1,5 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-
 import Profile from '../Profile/Profile';
 import Register from '../Register/Register';
 import Login from '../Login/Login';

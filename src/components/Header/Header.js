@@ -1,10 +1,22 @@
 import './Header.css';
+import React, { useState } from 'react';
 import logo from '../../images/logo.svg';
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import MobileMenu from '../MobileMenu/MobileMenu';
 
-function Header(props) {
+function Header() {
+  
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const handleOpenMobileMenu = () => {
+    setIsMobileMenuOpen(true);
+  }; 
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
+
   return (
     <header className='header'>
       <div className='header__container'>
@@ -20,9 +32,13 @@ function Header(props) {
           <Link to='/profile'>
             <button className='header__profile-button'></button>
           </Link>
-          <button type='button' className='header__mobile-button'></button>
+          <button
+            type='button'
+            onClick={handleOpenMobileMenu}
+            className='header__mobile-button'
+          ></button>
         </div>
-        <MobileMenu />
+        <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu}/>
       </div>
     </header>
   );
