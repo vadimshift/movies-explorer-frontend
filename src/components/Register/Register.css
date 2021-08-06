@@ -1,15 +1,19 @@
 .register {
-  max-width: 1280px;
+  background: #202020;
+  height: 100vh;
 }
-
-.register__container {
-  max-width: 396px;
+.register__content {
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.register__logo {
+.register__container {
+  max-width: 396px;
   margin-top: 70px;
+  margin-bottom: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .register__title {
@@ -22,6 +26,7 @@
   line-height: 29px;
   letter-spacing: 0em;
   text-align: left;
+  color: #ffffff;
 }
 
 .register__form {
@@ -36,7 +41,7 @@
   line-height: 12px;
   letter-spacing: 0em;
   text-align: left;
-  color: #a0a0a0;
+  color: #8b8b8b;
   margin-top: 20px;
   margin-bottom: 0;
 }
@@ -49,15 +54,14 @@
   font-family: 'Inter', 'Arial', sans-serif;
   height: 46px;
   width: 100%;
-  border-radius: 8px;
-  background: #f9f9f9;
-  font-size: 13px;
+  background: #202020;
+  color: #ffffff;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
-  color: #000000;
   border: none;
   outline: none;
   margin-top: 10px;
@@ -65,6 +69,10 @@
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
+  border-bottom: 1px solid #424242;
+}
+.register__input:focus {
+  border-bottom: 1px solid#4285F4;
 }
 
 .register__input_type_password {
@@ -91,7 +99,7 @@
   letter-spacing: 0em;
   text-align: center;
   color: #ffffff;
-  background: #ff6838;
+  background: #4285f4;
   border-radius: 3px;
   width: 100%;
   height: 45px;
@@ -113,12 +121,14 @@
   letter-spacing: 0em;
   text-align: center;
   color: #a0a0a0;
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .register__link {
   font-family: 'Inter', 'Arial', sans-serif;
   text-decoration: none;
-  color: #ff6838;
+  color: #4285f4;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -129,21 +139,28 @@
 }
 
 .register__link:hover {
-  opacity: 0.6;
-}
-
-@media screen and (max-width: 768px) {
-  .register__logo {
-    margin-top: 232px;
-  }
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 320px) {
   .register__logo {
-    margin-top: 56px;
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .register__container {
+    margin-top: 232px;
+    margin-bottom: 232px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .register__container {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }
 
@@ -151,6 +168,8 @@
   .register__container {
     margin-left: 30px;
     margin-right: 30px;
+    margin-top: 56px;
+    margin-bottom: 30px;
   }
 }
 
@@ -171,7 +190,7 @@
   .register__submit-button {
     font-size: 12px;
     line-height: 15px;
-    margin-top: 157px;
+    margin-top: 222px;
   }
 }
 
@@ -186,5 +205,11 @@
   .register__link {
     font-size: 12px;
     line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .register {
+    height: auto;
   }
 }

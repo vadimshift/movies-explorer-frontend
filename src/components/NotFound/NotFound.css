@@ -1,5 +1,13 @@
 .not-found {
+  background-color: #202020;
+  height: 100vh;
+}
+
+.not-found__container {
   max-width: 1280px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .not-found__title {
@@ -12,6 +20,7 @@
   text-align: center;
   margin-top: 246px;
   margin-bottom: 0;
+  color: #ffffff;
 }
 
 .not-found__subtitle {
@@ -24,6 +33,7 @@
   text-align: center;
   margin-top: 5px;
   margin-bottom: 0;
+  color: #ffffff;
 }
 
 .not-found__link {
@@ -35,7 +45,7 @@
   line-height: 17px;
   letter-spacing: 0em;
   text-align: center;
-  color: #ff6838;
+  color: #4285f4;
   margin-top: 184px;
   margin-bottom: 60px;
   margin-left: auto;
@@ -46,7 +56,7 @@
 }
 
 .not-found__link:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 320px) {
@@ -54,6 +64,12 @@
     font-size: 80px;
     line-height: 97px;
     margin-top: 329px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .not-found__title {
+    margin-top: 408px;
   }
 }
 
@@ -65,11 +81,24 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .not-found__link {
+    margin-top: 184px;
+    margin-bottom: 222px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .not-found__link {
     font-size: 12px;
     line-height: 15px;
     margin-top: 284px;
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .not-found {
+    height: auto;
   }
 }

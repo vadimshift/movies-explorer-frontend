@@ -1,18 +1,13 @@
 import './HeaderMenu.css';
-import { Link } from 'react-router-dom';
+/* import { Link } from 'react-router-dom'; */
 
-function HeaderMenu() {
+function HeaderMenu(props) {
   return (
     <>
-    <nav className='header-menu'>
-      <Link to='/signup' className='header-menu__link'>
-        Регистрация
-      </Link>
-      <Link to='/signin'>
-        <button className='header-menu__signin-button'>Войти</button>
-      </Link>
-    </nav>
-    <button type='button' className="header-menu__mobile-button"></button>
+      <nav className='header-menu'>
+        {props.children}
+      </nav>
+      {/* <button type='button' className='header-menu__mobile-button'></button> */}
     </>
   );
 }

@@ -1,12 +1,20 @@
 import './MobileMenu.css';
 import { NavLink } from 'react-router-dom';
 
-function MobileMenu() {
+function MobileMenu(props) {
+
   return (
     <>
-      <section className='mobile-menu'>
+      <section
+        className={`mobile-menu ${props.isOpen ? 'mobile-menu_active' : ''}`}
+      >
         <div className='mobile-menu__container'>
-          <button type='button' className='mobile-menu__close-button' />
+          <button
+            type='button'
+            onClick={props.onClose}
+            className='mobile-menu__close-button'
+          />
+
           <nav className='mobile-menu__navtab'>
             <NavLink
               exact
@@ -30,10 +38,10 @@ function MobileMenu() {
             >
               Сохраненные фильмы
             </NavLink>
-            <NavLink to='/profile'>
-              <button className='mobile-menu__profile-button'></button>
-            </NavLink>
           </nav>
+          <NavLink to='/profile'>
+            <button className='mobile-menu__profile-button'></button>
+          </NavLink>
           <button type='button' className='mobile-menu__mobile-button'></button>
         </div>
       </section>

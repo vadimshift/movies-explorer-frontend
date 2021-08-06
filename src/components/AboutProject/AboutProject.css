@@ -1,5 +1,10 @@
 .about-project {
+  background: #202020;
+}
+
+.about-project__container {
   max-width: 1280px;
+  margin: 0 auto;
 }
 
 .table {
@@ -18,6 +23,7 @@
   letter-spacing: -0.04em;
   text-align: left;
   margin: 0;
+  color: #ffffff;
 }
 
 .table__text {
@@ -30,11 +36,12 @@
   text-align: left;
   margin-top: 26px;
   margin-bottom: 0;
+  color: #ffffff;
 }
 
 .about-project-bar {
   display: grid;
-  margin: 110px 70px 0 70px;
+  margin: 110px 70px 141px 70px;
   grid-template-columns: minmax(140px, 1fr) 4fr;
 }
 
@@ -50,15 +57,17 @@
 }
 
 .about-project-bar__item_green {
-  background: #2be080;
+  background: #3ddc84;
+  color: #000000;
 }
 
 .about-project-bar__item_grey {
-  background: #f2f2f2;
+  background: #303030;
+  color: #ffffff;
 }
 
 .about-project-bar__item_light-grey {
-  color: #a0a0a0;
+  color: #8b8b8b;
 }
 
 @media screen and (max-width: 768px) {

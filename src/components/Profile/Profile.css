@@ -1,6 +1,13 @@
 .profile {
+  background: #202020;
+  height: 100vh;
+}
+
+.profile__mega-container {
   max-width: 1280px;
-  margin: 0;
+  margin-top: 74px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profile__title {
@@ -11,11 +18,12 @@
   line-height: 29px;
   letter-spacing: 0em;
   text-align: center;
-  margin-top: 74px;
+  margin-top: 0;
   margin-bottom: 0;
+  color: #ffffff;
 }
 
-.profile__conteiner {
+.profile__container {
   margin-top: 123px;
   max-width: 410px;
   margin-left: auto;
@@ -28,7 +36,7 @@
 }
 
 .profile__content:first-child {
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid #424242;
   padding-bottom: 16px;
 }
 
@@ -42,6 +50,7 @@
   text-align: left;
   margin-top: 16px;
   margin-bottom: 0;
+  color: #ffffff;
 }
 
 .profile__input-name,
@@ -58,7 +67,8 @@
   border: none;
   box-sizing: border-box;
   outline: none;
-  color: black;
+  color: #ffffff;
+  background-color: #202020;
 }
 
 .profile__button-container {
@@ -80,7 +90,7 @@
   text-align: center;
   border: none;
   cursor: pointer;
-  color: #000000;
+  color: #ffffff;
   background: none;
   padding: 0;
 }
@@ -163,23 +173,21 @@
 }
 
 @media screen and (max-width: 768px) {
-  .profile__title {
+  .profile__mega-container {
     margin-top: 236px;
-    margin-bottom: 0;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .profile__title {
+  .profile__mega-container {
     margin-top: 70px;
-    margin-bottom: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
   .profile__button-container {
     margin-top: 210px;
-    padding-bottom: 70px;
+    padding-bottom: 269px;
   }
 }
 
@@ -190,7 +198,7 @@
   }
 }
 @media screen and (max-width: 480px) {
-  .profile__conteiner {
+  .profile__container {
     margin-top: 80px;
     max-width: 410px;
     margin-left: 50px;
@@ -199,7 +207,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .profile__conteiner {
+  .profile__container {
     margin-top: 80px;
     max-width: 410px;
     margin-left: 30px;
@@ -218,5 +226,11 @@
   .profile__exit-button {
     font-size: 12px;
     line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    height: auto;
   }
 }
