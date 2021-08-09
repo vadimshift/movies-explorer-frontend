@@ -10,7 +10,6 @@ function Register({ onRegister }) {
     errors,
     isFormValid,
     handleInputChange,
-    resetForm,
     formError,
   } = useValidationForm();
   const { name, email, password } = values;

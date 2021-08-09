@@ -1,26 +1,30 @@
 import './Login.css';
 import logo from '../../images/logo.svg';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useCallback } from 'react';
+import { useValidationForm } from '../../utils/ValidationForm';
 
 function Login({ onLogin }) {
-  const [loginData, setLoginData] = useState({
-    password: '',
-    email: '',
-  });
+  const {
+    values,
+    errors,
+    isFormValid,
+    handleInputChange,
+    formError,
+  } = useValidationForm();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setLoginData({
-      ...loginData,
-      [name]: value,
-    });
-  };
+  const { password, email } = values;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onLogin(loginData);
-  };
+  const loginData = values;
+
+  const handleSubmit = useCallback(
+    (evt) => {
+      evt.preventDefault();
+      onLogin(loginData);
+    },
+    [loginData, onLogin]
+  );
+
   return (
     <section className='login'>
       <div className='login__content'>
@@ -36,21 +40,35 @@ function Login({ onLogin }) {
               type='email'
               id='email'
               name='email'
-              value={loginData.email}
+              value={email || ''}
+              onChange={handleInputChange}
               required
-              onChange={handleChange}
             ></input>
+            <span className='login__input-error'>{errors.email || ''}</span>
             <span className='login__input-subtitle'>Пароль</span>
             <input
               className='login__input login__input_type_password'
               type='password'
               id='password'
               name='password'
-              value={loginData.password}
               required
-              onChange={handleChange}
+              value={password || ''}
+              onChange={handleInputChange}
             ></input>
-            <button className='login__submit-button'>Войти</button>
+            <span className='register__input-error'>
+              {errors.password || ''}
+            </span>
+            <span className='register__error-message'>{formError || ''}</span>
+            <button
+              className={
+                isFormValid
+                  ? 'login__submit-button'
+                  : 'login__submit-button login__submit-button_inactive'
+              }
+              disabled={!isFormValid}
+            >
+              Войти
+            </button>
             <p className='login__submit-button-subtitle'>
               Ещё не зарегистрированы?
               <Link className='login__link' to='/signup'>
