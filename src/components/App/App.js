@@ -20,35 +20,21 @@ function App() {
   console.log(loggedIn);
 
   const onRegister = (data) => {
-    return (
-      AuthApi.register(data)
-        .then(() => {
-          history.push('/movies');
-        })
-        /* .catch(() => {
-        setRigisterResult(false);
-      }) */
-        .catch((err) => console.log(err))
-    );
-  }; 
- 
+    return AuthApi.register(data)
+      .then(() => {
+        history.push('/signin');
+      })
+      .catch((err) => console.log(err));
+  };
 
   const onLogin = (data) => {
     return AuthApi.authorization(data)
       .then((data) => {
         setLoggedIn(true);
-        setCurrentUser(data);
-        localStorage.setItem('token', 'jwt');
+        localStorage.setItem('token', data.token);
         history.push('/movies');
       })
       .catch((err) => console.log(err));
-  };
-
-  const onLogout = () => {
-    return AuthApi.logout().then(() => {
-      setLoggedIn(false);
-      localStorage.removeItem('token');
-    });
   };
 
   return (
@@ -71,7 +57,6 @@ function App() {
           <ProtectedRoute
             path='/profile'
             loggedIn={loggedIn}
-            onLogout={onLogout}
             component={Profile}
           />
           <Route path='/signin'>
