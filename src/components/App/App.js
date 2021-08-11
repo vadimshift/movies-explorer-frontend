@@ -1,7 +1,8 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import * as AuthApi from '../../utils/AuthApi';
+import * as MainApi from '../../utils/MainApi';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import ProtectedRoute from '../ProtectedRoute';
 import Profile from '../Profile/Profile';
@@ -17,8 +18,7 @@ function App() {
   const history = useHistory();
   const [loggedIn, setLoggedIn] = useState(false);
 
-  console.log(loggedIn);
-
+  //регистрация пользователя
   const onRegister = (data) => {
     return AuthApi.register(data)
       .then(() => {
@@ -26,15 +26,40 @@ function App() {
       })
       .catch((err) => console.log(err));
   };
-
+  //авторизация пользователя
   const onLogin = (data) => {
     return AuthApi.authorization(data)
       .then((data) => {
-        setLoggedIn(true);
         localStorage.setItem('token', data.token);
+        setLoggedIn(true);
         history.push('/movies');
       })
       .catch((err) => console.log(err));
+  };
+  //записываем информацию о пользователе в глобальную переменную
+  useEffect(() => {
+    if (loggedIn) {
+      MainApi.getUserInfo()
+        .then((res) => {
+          setCurrentUser(res);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [loggedIn]);
+
+  //Редактирование профиля пользователя
+  const handleEditUserInfo = ({name, email}) => {
+    MainApi.editUserInfo(name, email)
+      .then((res) => {
+        setCurrentUser(res);
+      })
+      .catch((err) => console.log(err));
+  };
+  //Выход с сайта
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setLoggedIn(false);
+    history.push("/");
   };
 
   return (
@@ -57,7 +82,9 @@ function App() {
           <ProtectedRoute
             path='/profile'
             loggedIn={loggedIn}
+            onLogout={handleLogout}
             component={Profile}
+            onEdit={handleEditUserInfo}
           />
           <Route path='/signin'>
             <Login onLogin={onLogin} />
