@@ -48,7 +48,7 @@ function App() {
   }, [loggedIn]);
 
   //Редактирование профиля пользователя
-  const handleEditUserInfo = ({name, email}) => {
+  const handleEditUserInfo = ({ name, email }) => {
     MainApi.editUserInfo(name, email)
       .then((res) => {
         setCurrentUser(res);
@@ -57,9 +57,9 @@ function App() {
   };
   //Выход с сайта
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem('token');
     setLoggedIn(false);
-    history.push("/");
+    history.push('/');
   };
 
   return (
@@ -67,7 +67,7 @@ function App() {
       <div className='page'>
         <Switch>
           <Route exact path='/'>
-            <Main />
+            <Main loggedIn={loggedIn} />
           </Route>
           <ProtectedRoute
             path='/movies'

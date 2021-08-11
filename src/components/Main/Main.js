@@ -1,6 +1,6 @@
 import './Main.css';
 
-import HeaderMain from '../HeaderMain/HeaderMain';
+import Header from '../Header/Header';
 import Promo from '../Promo/Promo';
 import AboutProject from '../AboutProject/AboutProject';
 import Techs from '../Techs/Techs';
@@ -9,10 +9,10 @@ import Portfolio from '../Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
 
 
-function Main() {
+function Main(props) {
   return (
     <>
-      <HeaderMain />
+      <Header loggedIn={props.loggedIn}/>
       <Promo />
       <AboutProject />
       <Techs />
