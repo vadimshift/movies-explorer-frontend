@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import * as AuthApi from '../../utils/AuthApi';
-import CurrentUserContext from '../../contexts/CurrentUserContext';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import ProtectedRoute from '../ProtectedRoute';
 import Profile from '../Profile/Profile';
 import Register from '../Register/Register';
@@ -16,7 +16,8 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const history = useHistory();
   const [loggedIn, setLoggedIn] = useState(false);
- 
+
+  console.log(loggedIn);
 
   const onRegister = (data) => {
     return (
@@ -29,17 +30,27 @@ function App() {
       }) */
         .catch((err) => console.log(err))
     );
-  };
+  }; 
+ 
+
   const onLogin = (data) => {
     return AuthApi.authorization(data)
       .then((data) => {
         setLoggedIn(true);
         setCurrentUser(data);
+        localStorage.setItem('token', 'jwt');
         history.push('/movies');
-        /* localStorage.setItem("token", 'jwt'); */
       })
       .catch((err) => console.log(err));
   };
+
+  const onLogout = () => {
+    return AuthApi.logout().then(() => {
+      setLoggedIn(false);
+      localStorage.removeItem('token');
+    });
+  };
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className='page'>
@@ -60,6 +71,7 @@ function App() {
           <ProtectedRoute
             path='/profile'
             loggedIn={loggedIn}
+            onLogout={onLogout}
             component={Profile}
           />
           <Route path='/signin'>

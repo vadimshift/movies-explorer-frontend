@@ -1,8 +1,11 @@
 import './Profile.css';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import { useContext } from 'react';
 import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
 
-function Profile() {
+function Profile(props) {
+  const currentUser = useContext(CurrentUserContext);
   return (
     <>
       <Header>
@@ -17,7 +20,7 @@ function Profile() {
               <input
                 id='name'
                 type='text'
-                placeholder='Вадим'
+                placeholder={currentUser.name || ''}
                 className='profile__input-name'
               ></input>
             </div>
@@ -26,13 +29,13 @@ function Profile() {
               <input
                 id='email '
                 type='email'
-                placeholder='pochta@yandex.ru'
+                placeholder={currentUser.email || ''}
                 className='profile__input-email'
               ></input>
             </div>
             <div className='profile__button-container'>
               <button className='profile__edit-button'>Редактировать</button>
-              <button className='profile__exit-button'>
+              <button onClick={props.onLogout} className='profile__exit-button'>
                 Выйти из аккаунта
               </button>
               <span className='profile__error-massage'>

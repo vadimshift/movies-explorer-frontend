@@ -1,8 +1,8 @@
-export const BASE_URL = "https://api.vadim.movies-explorer.nomoredomains.rocks";
+export const BASE_URL = 'https://api.vadim.movies-explorer.nomoredomains.rocks';
 
 const headers = {
-  Accept: "application/json",
-  "Content-Type": "application/json",
+  Accept: 'application/json',
+  'Content-Type': 'application/json',
 };
 
 const checkResponse = (res) => {
@@ -15,17 +15,37 @@ const checkResponse = (res) => {
 export const register = ({ name, email, password }) => {
   return fetch(`${BASE_URL}/signup`, {
     headers,
-    method: "POST",
+    method: 'POST',
     credentials: 'include',
     body: JSON.stringify({ name, email, password }),
   }).then((res) => checkResponse(res));
 };
 
-export const authorization = ({ password, email }) => {
-    return fetch(`${BASE_URL}/signin`, {
-      headers,
-      method: "POST",
-      credentials: 'include',
-      body: JSON.stringify({ password, email }),
-    }).then((res) => checkResponse(res));
-  };
+export const authorization = ({ email, password }) => {
+  return fetch(`${BASE_URL}/signin`, {
+    headers,
+    method: 'POST',
+    credentials: 'include',
+    body: JSON.stringify({ email, password }),
+  }).then((res) => checkResponse(res));
+};
+
+export const logout = () => {
+  return fetch(`${BASE_URL}/signout`, {
+    /* headers, */
+    method: 'GET',
+    credentials: 'include',
+  }).then((res) => checkResponse(res));
+};
+
+/* export const authorization = (email, password) => {
+  return fetch(`${BASE_URL}/signin`, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('jwt')}`,
+    },
+    body: JSON.stringify({ email, password }),
+  }).then((res) => checkResponse(res));
+}; */

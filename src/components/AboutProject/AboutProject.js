@@ -27,18 +27,18 @@ function AboutProject() {
           </div>
         </div>
         <div className='about-project-bar'>
-          <item className='about-project-bar__item about-project-bar__item_green'>
+          <div className='about-project-bar__item about-project-bar__item_green'>
             1 неделя
-          </item>
-          <item className='about-project-bar__item about-project-bar__item_grey'>
+          </div>
+          <div className='about-project-bar__item about-project-bar__item_grey'>
             4 недели
-          </item>
-          <item className='about-project-bar__item about-project-bar__item_light-grey'>
+          </div>
+          <div className='about-project-bar__item about-project-bar__item_light-grey'>
             Back-end
-          </item>
-          <item className='about-project-bar__item about-project-bar__item_light-grey'>
+          </div>
+          <div className='about-project-bar__item about-project-bar__item_light-grey'>
             Front-end
-          </item>
+          </div>
         </div>
       </div>
     </section>
