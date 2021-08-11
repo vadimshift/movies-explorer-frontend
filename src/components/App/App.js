@@ -62,6 +62,18 @@ function App() {
     history.push('/');
   };
 
+  // Проверка токена
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      AuthApi.getContent(token).then((res) => {
+        if (res) {
+          setLoggedIn(true);
+        }
+      });
+    } 
+  }, []);
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className='page'>
