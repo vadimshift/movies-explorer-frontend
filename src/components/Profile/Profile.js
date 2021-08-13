@@ -6,7 +6,7 @@ import Navigation from '../Navigation/Navigation';
 import { useCallback } from 'react';
 import { useValidationForm } from '../../utils/ValidationForm';
 
-function Profile({ onEdit, onLogout }) {
+function Profile({ onEditProfile, onLogout }) {
   const currentUser = useContext(CurrentUserContext);
 
   const { values, errors, isFormValid, handleInputChange, formError } =
@@ -19,9 +19,9 @@ function Profile({ onEdit, onLogout }) {
   const handleSubmit = useCallback(
     (evt) => {
       evt.preventDefault();
-      onEdit(userData);
+      onEditProfile(userData);
     },
-    [userData, onEdit]
+    [userData, onEditProfile]
   );
 
   return (
