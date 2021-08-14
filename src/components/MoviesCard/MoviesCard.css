@@ -50,7 +50,7 @@
   box-sizing: border-box;
   background-size: contain;
   padding: 0;
-  background-color:#222222;
+  background-color: #222222;
   cursor: pointer;
   outline: none;
   position: absolute;
@@ -65,8 +65,29 @@
   background-image: url(../../images/buttonsaved_active.svg);
 }
 
-.movies-card__saved-button_delete {
+.movies-card__button-delete {
   background-image: url(../../images/buttonsaved_delete.svg);
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 14px;
+  border: none;
+  box-sizing: border-box;
+  background-size: contain;
+  padding: 0;
+  background-color: #222222;
+  outline: none;
+  position: absolute;
+  top: 19px;
+  right: 14px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.movies-card__button-delete_visible {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
 }
 
 .movies-card__image__container {

@@ -3,26 +3,39 @@ import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { useContext } from 'react';
 import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
-import { useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { useValidationForm } from '../../utils/ValidationForm';
 
-function Profile({ onEditProfile, onLogout }) {
+function Profile(props) {
+  const { values, setValues, handleChange, errors, isFormValid } =
+    useValidationForm();
+  const [isFormDisabled, setIsFormDisabled] = useState(true);
+
   const currentUser = useContext(CurrentUserContext);
 
-  const { values, errors, isFormValid, handleInputChange, formError } =
-    useValidationForm();
+  useEffect(() => {
+    setValues(currentUser);
+  }, [currentUser, setValues]);
 
-  const { name, email } = values;
+  const handleEditProfile = (e) => {
+    e.preventDefault();
+    setIsFormDisabled(false);
+  }
 
-  const userData = values;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.onChangeUser(values.name, values.email);
+  }
 
-  const handleSubmit = useCallback(
-    (evt) => {
-      evt.preventDefault();
-      onEditProfile(userData);
-    },
-    [userData, onEditProfile]
-  );
+  useEffect(() => {
+    setIsFormDisabled(props.isUpdateSuccess);
+  }, [props.isUpdateSuccess, props.onChangeUser]);
+
+  useEffect(() => {
+    if (props.isSaving) {
+      setIsFormDisabled(true);
+    }
+  }, [props.isSaving]);
 
   return (
     <>
@@ -36,43 +49,68 @@ function Profile({ onEditProfile, onLogout }) {
             <div className='profile__content'>
               <p className='profile__subtitle'>Имя</p>
               <input
-                id='name'
+                pattern='[а-яА-Яa-zA-ZёË\- ]{1,}'
                 name='name'
-                value={name || ''}
-                onChange={handleInputChange}
+                value={values.name || ''}
+                onChange={handleChange}
                 type='text'
-                placeholder={currentUser.name || ''}
                 required
+                disabled={isFormDisabled}
                 className='profile__input-name'
               ></input>
             </div>
-            <span className='profile__error-massage'>{errors.name || ''}</span>
+            <span className='profile__error-massage'>{errors.name}</span>
             <div className='profile__content'>
               <p className='profile__subtitle'>E-mail</p>
               <input
-                id='email'
                 type='email'
                 name='email'
-                value={email || ''}
-                onChange={handleInputChange}
-                placeholder={currentUser.email || ''}
+                value={values.email || ''}
+                onChange={handleChange}
+                disabled={isFormDisabled}
                 required
                 className='profile__input-email'
               ></input>
             </div>
-            <span className='profile__error-massage'>{errors.email || ''}</span>
+            <span className='profile__error-massage'>{errors.email}</span>
             <div className='profile__button-container'>
-              <button className={isFormValid
-                  ? 'profile__edit-button'
-                  : 'profile__edit-button profile__edit-button_inactive'} disabled={!isFormValid}>
-                Редактировать
-              </button>
-              <button className='profile__exit-button' onClick={onLogout}>
+              <span
+                className={`profile__form-message ${
+                  props.isUpdateSuccess
+                    ? 'profile__form-message_type_success'
+                    : 'profile__form-message_type_error'
+                }`}
+              >
+                {props.message}
+              </span>
+              {isFormDisabled ? (
+                <button
+                  className='profile__edit-button'
+                  onClick={handleEditProfile}
+                >
+                  Редактировать
+                </button>
+              ) : (
+                <button
+                  type='submit'
+                  disabled={!isFormValid}
+                  className={`profile__edit-button ${
+                    isFormValid ? '' : 'profile__edit-button_inactive'
+                  }`}
+                >
+                  Сохранить
+                </button>
+              )}
+              <button
+                className={
+                  isFormDisabled
+                    ? 'profile__exit-button'
+                    : 'profile__exit-button no-display'
+                }
+                onClick={props.onLogout}
+              >
                 Выйти из аккаунта
               </button>
-              <span className='profile__error-massage'>
-                {formError || ''}
-              </span>
             </div>
           </form>
         </div>

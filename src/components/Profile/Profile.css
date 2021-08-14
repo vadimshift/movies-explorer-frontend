@@ -103,6 +103,13 @@
   opacity: 1;
 }
 
+.profile__form-message_type_success {
+  color: #14dd50;
+}
+.profile__form-message_type_error {
+  color: #ee3465;
+}
+
 
 .profile__exit-button {
   font-family: 'Inter', 'Arial', sans-serif;

@@ -21,7 +21,6 @@ function Navigation() {
           Сохраненные фильмы
         </NavLink>    
       </nav>
-      {/* <button type='button' className='navigation__mobile-button'></button> */}
     </>
   );
 }
