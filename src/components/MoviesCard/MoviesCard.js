@@ -102,16 +102,14 @@ function MoviesCard(props) {
         {props.saved ? (
           <button
             className={`movies-card__button-delete ${
-              isVisibleDeleteButton
-                ? 'movies-card__button-delete_visible'
-                : ''
+              isVisibleDeleteButton ? 'movies-card__button-delete_visible' : ''
             }`}
             onClick={handleDeleteMovie}
           ></button>
         ) : (
           <button
-            className={`movies-card__saved-button ${
-              isSaved ? 'movies-card__saved-button_active' : ''
+            className={` ${
+              currentMovie ? 'movies-card__saved-button_active' : 'movies-card__saved-button'
             }`}
             onClick={isSaved ? handleClickDisLikeButton : handleCLickLikeButton}
           ></button>
