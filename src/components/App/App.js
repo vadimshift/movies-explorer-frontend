@@ -10,6 +10,7 @@ import {
 import * as MainApi from '../../utils/MainApi';
 import * as MoviesApi from '../../utils/MoviesApi';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import useDisplayWidth from "../../utils/DisplayWidth";
 import ProtectedRoute from '../ProtectedRoute';
 import Profile from '../Profile/Profile';
 import Register from '../Register/Register';
@@ -36,6 +37,8 @@ function App() {
   const [isSaving, setIsSaving] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const isLoggedIn = localStorage.getItem('loggedIn');
+
+  const displayWidth = useDisplayWidth();
 
   const location = useLocation();
   const history = useHistory();
@@ -278,6 +281,7 @@ function App() {
             path='/movies'
             component={Movies}
             loggedIn={isLoggedIn}
+            displayWidth={displayWidth}
             movies={movies}
             onSearchMovies={searchMovies}
             isLoading={isLoading}

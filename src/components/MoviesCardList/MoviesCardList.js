@@ -1,59 +1,29 @@
 import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 import Preloader from '../Preloader/Preloader';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function MoviesCardList(props) {
-  const [initialCardsNumber, setInitialCardsNumber] = useState(() => {
-    const windowSize = window.innerWidth;
-    if (windowSize < 720) {
-      return 5;
-    } else if (windowSize < 920) {
-      return 8;
-    } else if (windowSize < 1279) {
-      return 12;
-    } else if (windowSize > 1279) {
-      return 12;
-    }
-  });
-  // eslint-disable-next-line
-  const [moreCardsNumber, setMoreCardsNumber] = useState(() => {
-    const windowSize = window.innerWidth;
-    if (windowSize < 720) {
-      return 2;
-    } else if (windowSize < 920) {
-      return 2;
-    } else if (windowSize < 1279) {
-      return 3;
-    } else if (windowSize > 1279) {
-      return 3;
-    }
-  });
+  let moviesCount;
+  let newMoviesCount;
 
-  const displayWidth = () => {
-    const windowSize = window.innerWidth;
-    if (windowSize < 720) {
-      setInitialCardsNumber(5);
-    } else if (windowSize < 920) {
-      setInitialCardsNumber(8);
-    } else if (windowSize < 1279) {
-      setInitialCardsNumber(12);
-    } else if (windowSize > 1279) {
-      setInitialCardsNumber(12);
-    }
+  if (props.displayWidth > 1088) {
+    moviesCount = 12;
+    newMoviesCount = 3;
+  } else if (props.displayWidth > 500) {
+    moviesCount = 8;
+    newMoviesCount = 2;
+  } else if (props.displayWidth <= 500) {
+    moviesCount = 5;
+    newMoviesCount = 2;
   }
-
-  const moviesDisplayed = props.movies?.slice(0, initialCardsNumber);
+  const [numberMovies, setNumberMovies] = useState(moviesCount);
+  const moviesDisplayed = props.movies?.slice(0, numberMovies);
+ 
 
   const addMoviesToDisplay = () => {
-    setInitialCardsNumber((prevState) => {
-      return prevState + moreCardsNumber;
-    });
-  }
-
-  useEffect(() => {
-    window.addEventListener('resize', displayWidth);
-  }, []);
+    setNumberMovies(numberMovies + newMoviesCount);
+  };
 
   return (
     <section className='movies-card-list'>

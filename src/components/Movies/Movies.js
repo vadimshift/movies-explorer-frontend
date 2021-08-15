@@ -23,6 +23,7 @@ function Movies(props) {
         onDeleteMovie={props.onDeleteMovie}
         saved={false}
         savedMovies={props.savedMovies}
+        displayWidth={props.displayWidth}
       />
       <Footer />
     </>
