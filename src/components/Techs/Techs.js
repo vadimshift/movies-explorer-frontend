@@ -12,13 +12,13 @@ function Techs(props) {
           в&nbsp;дипломном проекте.
         </p>
         <div className='techs-list'>
-          <item className='techs-list__item'>HTML</item>
-          <item className='techs-list__item'>CSS</item>
-          <item className='techs-list__item'>JS</item>
-          <item className='techs-list__item'>React</item>
-          <item className='techs-list__item'>Git</item>
-          <item className='techs-list__item'>Express.js</item>
-          <item className='techs-list__item'>mongoDB</item>
+          <div className='techs-list__item'>HTML</div>
+          <div className='techs-list__item'>CSS</div>
+          <div className='techs-list__item'>JS</div>
+          <div className='techs-list__item'>React</div>
+          <div className='techs-list__item'>Git</div>
+          <div className='techs-list__item'>Express.js</div>
+          <div className='techs-list__item'>mongoDB</div>
         </div>
       </div>
     </section>
